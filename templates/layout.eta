@@ -7,25 +7,12 @@
 		<title><%= it.resume.basics?.name ? it.resume.basics.name : ''%></title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-		<!--========== BOX ICONS ==========-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-		<!--========== ICONS COUT ==========-->
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-		<!--========== CSS ==========-->
-		<link rel="stylesheet" href="ASSETS/CSS/styles.css">
-
-		<!--==================== FAVICON ====================-->
-		<link rel="shortcut icon" href="ASSETS/IMAGES/Logo.png" type="image/x-icon">
-
-		<!--==================== METAs ====================-->
-		<meta name="description" content="A Personal Responsive Resume CV">
-		<meta name="author" content="Zia Codes">
-		<meta name="keywords" content="Personal, Responsive, ResumeCV, ZiaCodes">
 		
 		<style>
-			<%= it.css %>
+			<%= it.mainCss %>
+			<%= it.customCss %>
 			<%= it.widgetCss %>
 		</style>
 

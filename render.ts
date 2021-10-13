@@ -27,7 +27,8 @@ export const render = async (
       "./templates/layout.eta",
       import.meta.url,
     );
-    const css = await getFileContent("./css/style.css", import.meta.url);
+    const mainCss = await getFileContent("./css/main.css", import.meta.url);
+    const customCss = await getFileContent("./css/custom.css", import.meta.url);
 
     const awardTemplateName = "awards";
     eta.templates.define(
@@ -265,7 +266,8 @@ export const render = async (
       orderedMap.set(resumeCategory, map.get(resumeCategory)!);
     });
     const result = await eta.render(layout, {
-      css: css,
+      mainCss: mainCss,
+      customCss: customCss,
       widgetCss: widgetCss,
       formatDate: formatDate,
       resume: resume,
