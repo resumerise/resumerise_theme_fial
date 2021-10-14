@@ -1,6 +1,6 @@
-<section id="work">
+<section class="work section" id="work">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <h1><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h1>
+        <h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
     <% it.resume?.work.forEach(function(work) { %>
     <div class="item content">
