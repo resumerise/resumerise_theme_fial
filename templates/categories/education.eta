@@ -1,14 +1,13 @@
  <section class="education section" id="education">
-	<h3 class="section__title">Education</h3>
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h1>
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</h1>
 	<% } %>
 	<% if(it.resume?.education) { %>
-		<div class="category-container">
+		<div class="education__container">
 			<% it.resume?.education.forEach(function(education) { %>
-				<div class="item content">
+				<div class="education__card">
 					<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate, 
