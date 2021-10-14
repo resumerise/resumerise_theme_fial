@@ -6,24 +6,18 @@
 :root {
 	--header-height: 3rem;
 	/*========== Colors ==========*/
-	--first-color: #5785e0;
-	--first-color-second: #5785e0;
-	--first-color-alt: #4370cb;
-	--first-color-lighter: #b9cef8;
-	--first-color-lighter-dark: #232529;
-	--title-color: #232529;
-	--text-color: #6a707c;
-	--text-color-light: #9fa3ad;
-	--input-color: #eef2fc;
-	--body-color: #fbfcfe;
-	--container-color: white;
-	--white-color: var(--container-color);
-	--black-color: black;
-	--scroll-bar-color: #e2e4e9;
-	--scroll-bar-thumb-color: #c6cad2;
+	--title-color: hsl(60, 5%, 4%);
+	--text-color: hsl(60, 5%, 24%);
+	--text-color-light: hsl(60, 0%, 44%);
+	--container-color: hsl(60, 0%, 98%);
+	--container-color-alt: hsl(60, 3%, 94%);
+	--body-color: hsl(60, 0%, 99%);
+	--white-color: white;
 	/*========== FONT & TYPORGRAPHY ==========*/
 	--body-font: 'Poppins', sans-serif;
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+	--biggest-font-size: 4rem;
+	--bigger-font-size: 3rem;
 	--big-font-size: 2rem;
 	--h1-font-size: 1.5rem;
 	--h2-font-size: 1.25rem;
@@ -53,6 +47,8 @@
 
 @media screen and (min-width: 968px) {
 	:root {
+		--biggest-font-size: 5rem;
+		--bigger-font-size: 4rem;
 		--big-font-size: 3rem;
 		--h1-font-size: 2.25rem;
 		--h2-font-size: 1.5rem;
@@ -108,20 +104,30 @@ img {
 /*========== CLASS CSS ==========*/
 
 .section {
-	padding: 2rem 0;
+	padding: 3rem 0;
 }
 
 .section__title {
 	position: relative;
 	font-size: var(--h2-font-size);
-	color: var(--first-color-alt);
+	color: var(--white-color);
 	font-weight: var(--font-semi-bold);
+	background-color: var(--text-color-light);
+	text-transform: uppercase;
+	padding: .5rem 1rem;
+	width: fit-content;
 	text-align: center;
+	margin: auto;
 	margin-bottom: var(--mb-1-5);
 }
 
-.black {
-	color: var(--black-color);
+.box {
+	position: absolute;
+	background: #29d297;
+	background: linear-gradient(90deg, #29d297 0%, #14d2c3 35%, #00d4ff 100%);
+	width: 100%;
+	height: calc(90vh - 30vh);
+	z-index: -1;
 }
 
 /*========== LAYOUT ==========*/
@@ -147,11 +153,6 @@ img {
 	background-color: var(--body-color);
 	box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
 	/* transition: .3s; */
-}
-
-.l-main {
-	background-color: var(--container-color-alt);
-	padding: 1rem;
 }
 
 /*========== NAV ==========*/
@@ -206,7 +207,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	font-size: var(--smaller-font-size);
-	color: var(--first-color-second);
+	color: var(--text-color-light);
 	font-weight: var(--font-medium);
 }
 

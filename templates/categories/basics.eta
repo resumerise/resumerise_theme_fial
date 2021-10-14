@@ -2,30 +2,32 @@
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
+    <h2 class="home___title">Cia Rodriguez</h2>
+    <h4 class="home___subtitle">Graphic Designer</h4>
     <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-        <h1><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+        <h1 class="section__title black"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
     <% } %>
-    <div class="content">
+    <div class="contact__container bd-grid">
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
             value: it.resume.basics.website,
-            id: 'basics-website',
+            classes: 'basics-website',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
             value: it.resume.basics.email,
-            id: 'basics-email',
+            classes: 'basics-email',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
             value: it.resume.basics.phone,
-            id: 'basics-phone',
+            classes: 'basics-phone',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 
             value: it.resume.basics.summary,
-            id: 'basics-summary',
+            classes: 'basics-summary',
         }) %>
     </div>
 </section>
