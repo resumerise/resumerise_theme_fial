@@ -233,23 +233,34 @@ img {
 .home__img {
 	display: block;
 	margin: auto;
+	margin-top: var(--mb-1);
 }
-
+.home__data{
+	margin: var(--mb-1) 0;
+}
 .home___title {
-	font-size: var(--biggest-font-size);
+	font-size: var(--bigger-font-size);
 	font-weight: 800;
 	line-height: 1;
 }
 
 .home___subtitle {
-	font-size: var(--big-font-size);
+	font-size: var(--h2-font-size);
 	margin: 0;
 	font-weight: 300;
 	letter-spacing: 5px;
 }
+.information__container{
+	display: flex;
+	flex-direction: row;
+	column-gap: var(--mb-0-5);
+}
 
 .home___title, .home___subtitle {
 	text-align: center;
+}
+.information{
+	font-weight: var(--font-semi-bold);
 }
 
 /* ========== WORK HISTORY SECTION ========== */
