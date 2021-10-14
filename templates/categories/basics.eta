@@ -1,4 +1,4 @@
-<section id='basics'>
+<section class="home__container">
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
