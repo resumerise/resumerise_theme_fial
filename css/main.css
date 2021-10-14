@@ -526,6 +526,9 @@ body {
 		height: 29.7cm;
 		margin: 27mm 16mm 27mm 16mm;
 	}
+	.l-header {
+		display: none;
+	}
 }
 
 @media screen {
