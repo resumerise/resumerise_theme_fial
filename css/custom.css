@@ -478,7 +478,7 @@ img {
     text-align: initial;
   }
   #education .category-container {
-    row-gap: 0;
+    row-gap: 0;stroke-dasharray: var(--small-font-size);
   }
   #education h1 {
     margin: 0;
