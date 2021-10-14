@@ -276,21 +276,13 @@ img {
 
 /*========== EDUCATION SECTION ==========*/
 
-#education label {
-	display: none;
-}
-
-#education .category-container {
+.education__container {
 	display: flex;
 	flex-direction: column;
 	row-gap: var(--mb-1);
 }
 
-#education .education-institution {
-	font-size: large;
-}
-
-#education h1 {
+.education__title {
 	font-size: var(--h3-font-size);
 	color: var(--first-color-second);
 }
