@@ -236,9 +236,11 @@ img {
 	margin: auto;
 	margin-top: var(--mb-1);
 }
-.home__data{
+
+.home__data {
 	margin: var(--mb-1) 0;
 }
+
 .home___title {
 	font-size: var(--bigger-font-size);
 	font-weight: 800;
@@ -251,12 +253,14 @@ img {
 	font-weight: 300;
 	letter-spacing: 5px;
 }
-.information__container{
+
+.information__container {
 	display: flex;
 	flex-direction: row;
 	column-gap: var(--mb-0-5);
 }
-.information__container:nth-last-child(1){
+
+.information__container:nth-last-child(1) {
 	flex-direction: column;
 	display: flex;
 	text-align: center;
@@ -265,11 +269,12 @@ img {
 .home___title, .home___subtitle {
 	text-align: center;
 }
-.information{
+
+.information {
 	font-weight: var(--font-semi-bold);
 }
 
-.box2{
+.box2 {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 }
@@ -385,13 +390,13 @@ img {
 		flex-direction: column;
 		grid-column: 1/3;
 	}
-	.box2{
+	.box2 {
 		display: grid;
 		align-items: center;
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 5rem;
 	}
-	.information__container:nth-last-child(1){
+	.information__container:nth-last-child(1) {
 		text-align: initial;
 	}
 	.reach {
@@ -405,5 +410,8 @@ img {
 	}
 	.focus {
 		margin-top: -11rem;
+	}
+	.location, .work, .education, .references, .languages, .skills, .volunteer {
+		text-align: right;
 	}
 }
