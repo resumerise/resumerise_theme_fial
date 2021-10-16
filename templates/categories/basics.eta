@@ -4,7 +4,7 @@
             picture: it.resume.basics.picture
         }) %>
         <div class="home__data">
-            <h2 class="home___title">Cia Rodriguez</h2>
+            <h2 class="home___title">Cia <br> Rodriguez</h2>
             <h4 class="home___subtitle">Graphic Designer</h4>
         </div>
     </div>

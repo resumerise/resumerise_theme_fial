@@ -1,7 +1,7 @@
 <div class="key-value-item <%= it.classes %>" id="<%= it.id %>">
 <% if(it.label) { %>
     <label class="information">
-        <%= it.label %> : <br>
+        <%= it.label %> : 
     </label>
 <% } %>
 <% if(it.value) { %>

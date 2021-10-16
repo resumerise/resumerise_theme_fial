@@ -414,13 +414,10 @@ img {
 	.focus {
 		margin-top: -11rem;
 	}
-	/* .location, .work, .education, .references, .languages, .skills, .volunteer {
-		text-align: right;
-	} */
-	.key__info{
-		margin-left: 3rem;
+	.home___title, .home___subtitle {
+		text-align: initial;
 	}
-	.information__container .key__info{
-		margin-left: 0;
+	.location, .work, .education, .references, .languages, .skills, .volunteer {
+		text-align: right;
 	}
 }
