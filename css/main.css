@@ -155,6 +155,9 @@ img {
 	box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
 	/* transition: .3s; */
 }
+.l-main{
+	padding: var(--mb-1);
+}
 
 /*========== NAV ==========*/
 
@@ -411,7 +414,13 @@ img {
 	.focus {
 		margin-top: -11rem;
 	}
-	.location, .work, .education, .references, .languages, .skills, .volunteer {
+	/* .location, .work, .education, .references, .languages, .skills, .volunteer {
 		text-align: right;
+	} */
+	.key__info{
+		margin-left: 3rem;
+	}
+	.information__container .key__info{
+		margin-left: 0;
 	}
 }
