@@ -137,6 +137,16 @@ img {
 .information{
 	font-size: var(--h3-font-size);
 }
+.label{
+	color: black;
+	font-weight: var(--font-semi-bold)git add ;
+}
+.list{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
 
 /*========== LAYOUT ==========*/
 
