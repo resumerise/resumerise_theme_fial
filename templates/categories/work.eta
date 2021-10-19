@@ -6,9 +6,9 @@
     <div class="work__container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
         <% if (work.company) { %>
-        <h2>
+        <h4>
             <%= work.company %>
-        </h2>
+        </h4>
         <% } %>
         <%~ include('date-range', {
             formatDate: it.formatDate,
