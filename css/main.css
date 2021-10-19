@@ -139,13 +139,12 @@ img {
 }
 .label{
 	color: black;
-	font-weight: var(--font-semi-bold)git add ;
+	font-weight: var(--font-semi-bold);
 }
 .list{
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 /*========== LAYOUT ==========*/
@@ -254,6 +253,7 @@ img {
 .home__img {
 	display: block;
 	margin: auto;
+	border-radius: 50%;
 	margin-top: var(--mb-1);
 }
 

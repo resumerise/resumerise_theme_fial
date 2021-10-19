@@ -35,7 +35,7 @@
         <%~ include('list', {
 			label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
 			data: work.highlights,
-			id: 'work-highlights',
+			id: 'work-highlights r',
 		}) %>
     </div>
     <% }) %>
