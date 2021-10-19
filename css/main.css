@@ -130,6 +130,13 @@ img {
 	height: calc(90vh - 30vh);
 	z-index: -1;
 }
+.key-value-item{
+	display: flex;
+	flex-direction: column;
+}
+.information{
+	font-size: var(--h3-font-size);
+}
 
 /*========== LAYOUT ==========*/
 
@@ -417,7 +424,13 @@ img {
 	.home___title, .home___subtitle {
 		text-align: initial;
 	}
-	.location, .work, .education, .references, .languages, .skills, .volunteer {
-		text-align: right;
+	.r, .location, .work, .education, .references, .languages, .skills, .volunteer {
+		text-align: right !important;
+	}
+	.r{
+		margin-right: 0 !important;
+	}
+	.l{
+		margin-left: 0;
 	}
 }

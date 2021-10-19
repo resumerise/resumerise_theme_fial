@@ -11,9 +11,9 @@
     <div class="box3">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h1 class="section__title black"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+            <h1 class="section__title black center"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
         <% } %>
-        <div class="contact__container bd-grid">
+        <div class="contact__container">
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
                 value: it.resume.basics.website,

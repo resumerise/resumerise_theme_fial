@@ -1,6 +1,6 @@
 <section class="publications section" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<h3 class="section__title">
+		<h3 class="section__title l">
 		    <%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %>
 		</h3>
 	<% } %>

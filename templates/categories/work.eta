@@ -1,9 +1,9 @@
 <section class="work section" id="work">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
+        <h3 class="section__title r"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
     <% it.resume?.work.forEach(function(work) { %>
-    <div class="item content">
+    <div class="work__container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
         <% if (work.company) { %>
         <h2>

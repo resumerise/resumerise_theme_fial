@@ -1,6 +1,6 @@
 <section class="references section" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<h3 class="section__title">
+		<h3 class="section__title r">
 			<%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %>
 		</h3>
 	<% } %>
