@@ -1,0 +1,458 @@
+/*===== GOOGLE FONTS =====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+	--header-height: 3rem;
+	/*========== Colors ==========*/
+	--title-color: hsl(60, 5%, 4%);
+	--text-color: hsl(60, 5%, 24%);
+	--text-color-light: hsl(60, 0%, 44%);
+	--container-color: hsl(60, 0%, 98%);
+	--container-color-alt: hsl(60, 3%, 94%);
+	--body-color: hsl(60, 0%, 99%);
+	--white-color: white;
+	/*========== FONT & TYPORGRAPHY ==========*/
+	--body-font: 'Poppins', sans-serif;
+	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+	--biggest-font-size: 4rem;
+	--bigger-font-size: 3rem;
+	--big-font-size: 2rem;
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1.125rem;
+	--normal-font-size: .938rem;
+	--small-font-size: .813rem;
+	--smaller-font-size: .75rem;
+	/*========== FONT WEIGHT ==========*/
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	/*========== MARGINS ==========*/
+	--mb-0-25: 0.25rem;
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
+	/*========== Z INDEX ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+
+/*========== FONT SIZE FOR LARGER SCREENS ==========*/
+
+@media screen and (min-width: 968px) {
+	:root {
+		--biggest-font-size: 5rem;
+		--bigger-font-size: 4rem;
+		--big-font-size: 3rem;
+		--h1-font-size: 2.25rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: .875rem;
+		--smaller-font-size: .813rem;
+	}
+}
+
+/*========== BASE ==========*/
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0 0 var(--header-height) 0;
+	padding: 0;
+	background-color: var(--body-color);
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	color: var(--text-color);
+}
+
+h1, h2, h3, ul, p {
+	margin: 0;
+}
+
+h1, h2, h3 {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+h4{
+	font-weight: var(--font-semi-bold);
+	font-size: var(--h1-font-size);
+	margin: var(--mb-1-5) 0 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 70%;
+	height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+
+.section {
+	padding: 3rem 0;
+}
+
+.section__title {
+	position: relative;
+	font-size: var(--h2-font-size);
+	color: var(--white-color);
+	font-weight: var(--font-semi-bold);
+	background-color: var(--text-color-light);
+	text-transform: uppercase;
+	padding: .5rem 1rem;
+	width: fit-content;
+	text-align: center;
+	letter-spacing: 1px;
+	margin: auto;
+	margin-bottom: var(--mb-1-5);
+}
+
+.box {
+	position: absolute;
+	background: #29d297;
+	background: linear-gradient(90deg, #29d297 0%, #14d2c3 35%, #00d4ff 100%);
+	width: 100%;
+	height: calc(90vh - 30vh);
+	z-index: -1;
+}
+.key-value-item{
+	display: flex;
+	flex-direction: column;
+}
+.key-list-item{
+	display: flex;
+	flex-direction: column;
+}
+.information{
+	font-size: var(--h3-font-size);
+}
+.label{
+	color: black;
+	font-weight: var(--font-semi-bold);
+}
+.list{
+	display: flex;
+	flex-direction: column;
+}
+
+/*========== LAYOUT ==========*/
+
+.bd-container {
+	max-width: 968px;
+	width: calc(100% - 3rem);
+	margin-left: var(--mb-1-5);
+	margin-right: var(--mb-1-5);
+}
+
+.bd-grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.l-header {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: var(--z-fixed);
+	background-color: var(--body-color);
+	box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+	/* transition: .3s; */
+}
+.l-main{
+	padding: var(--mb-1);
+}
+
+/*========== NAV ==========*/
+
+.nav {
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 968px) {
+	.nav__menu {
+		position: fixed;
+		bottom: -100%;
+		left: 0;
+		width: 100%;
+		padding: 2rem 1.5rem;
+		background-color: var(--body-color);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+		border-radius: 1rem 1rem 0 0;
+		z-index: var(--z-fixed);
+		transition: .3s;
+	}
+}
+
+.nav__logo {
+	z-index: var(--z-fixed);
+}
+
+.nav__logo, .nav__toggle {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+
+.nav__toggle {
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.nav__item {
+	text-align: center;
+}
+
+.nav__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	font-size: var(--smaller-font-size);
+	color: var(--text-color-light);
+	font-weight: var(--font-medium);
+}
+
+.nav__icon {
+	font-size: 1.2rem;
+	margin-bottom: var(--mb-0-5);
+}
+
+/* Show menu */
+
+.show-menu {
+	bottom: var(--header-height);
+}
+
+/* Active menu link */
+
+.active-link {
+	color: var(--title-color);
+}
+
+/*========== HOME SECTION ==========*/
+
+.home__img {
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+	margin-top: var(--mb-1);
+}
+
+.home__data {
+	margin: var(--mb-1) 0;
+}
+
+.home___title {
+	font-size: var(--bigger-font-size);
+	font-weight: 800;
+	line-height: 1;
+}
+
+.home___subtitle {
+	font-size: var(--h2-font-size);
+	margin: 0;
+	font-weight: 300;
+	letter-spacing: 5px;
+}
+
+.information__container {
+	display: flex;
+	flex-direction: row;
+	column-gap: var(--mb-0-5);
+}
+
+.information__container:nth-last-child(1) {
+	flex-direction: column;
+	display: flex;
+	text-align: center;
+}
+
+.home___title, .home___subtitle {
+	text-align: center;
+}
+
+.information {
+	font-weight: var(--font-semi-bold);
+}
+
+.box2 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+/* ========== WORK HISTORY SECTION ========== */
+
+.history__container {
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1-5);
+}
+
+.history__title {
+	font-weight: 700;
+}
+
+.history__subtitle {
+	margin: 0 0 1rem;
+	font-weight: 300;
+}
+
+/* ========== REACH ME SECTION ========== */
+
+.reach__link-name {
+	font-weight: 500;
+}
+
+/* ========== SCHOOLS ATTENDED SECTION ========== */
+
+.school__container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+
+.school__title {
+	font-size: var(--h3-font-size);
+	font-weight: 700;
+}
+
+.school__subtitle {
+	font-size: var(--small-font-size);
+	font-weight: 400;
+}
+
+.school__description {
+	margin-top: .5rem;
+}
+
+/* ========== REFERENCES SECTION ========== */
+
+/* Scroll top */
+
+.scrolltop {
+	position: fixed;
+	right: 1rem;
+	bottom: -20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.3rem;
+	background-color: var(--container-color-alt);
+	border-radius: .4rem;
+	z-index: var(--z-tooltip);
+	transition: .4s;
+	visibility: hidden;
+}
+
+.scrolltop__icon {
+	font-size: 1.2rem;
+	color: var(--text-color);
+}
+
+.show-scroll {
+	visibility: visible;
+	bottom: 5rem;
+}
+
+/*========== MEDIA QUERIES ==========*/
+
+/* For small devices, menu two columns */
+
+@media screen and (max-width: 320px) {
+	.nav__link {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem .5rem;
+	}
+}
+
+/* Classes modified for large screen size */
+
+@media screen and (min-width: 968px) {
+	body {
+		margin: 3rem 0;
+	}
+	.bd-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.l-header, .scrolltop {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.l-main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+	.home {
+		display: flex;
+		flex-direction: column;
+		grid-column: 1/3;
+	}
+	.box2 {
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 5rem;
+	}
+	.information__container:nth-last-child(1) {
+		text-align: initial;
+	}
+	.reach {
+		grid-row: 4/5;
+		grid-column: 1;
+		margin-top: -30rem;
+	}
+	.references {
+		grid-row: 5/6;
+		grid-column: 1;
+	}
+	.focus {
+		margin-top: -11rem;
+	}
+	.home___title, .home___subtitle {
+		text-align: initial;
+	}
+	.r, .location, .work, .education, .references, .languages, .skills, .volunteer {
+		text-align: right !important;
+	}
+	.r{
+		margin-right: 0 !important;
+		text-align: right !important;
+	}
+	#r{
+		
+		text-align: right;
+	}
+	.l{
+		margin-left: 0;
+	}
+}

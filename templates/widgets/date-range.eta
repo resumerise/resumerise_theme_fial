@@ -10,9 +10,13 @@
             <%= it.formatDate(it.startDate, it.settings) %>
         </span>
     <% } %>
-    <% if(!it.settings?.labels?.general?.startDate && !it.settings?.labels?.general?.endDate) { %>
+    <% if(!it.settings?.labels?.general?.startDate && !it.settings?.labels?.general?.endDate && !it.separator) { %>
         <i class="fas fa-angle-right"></i>
     <% } %>
+    <% if(it.separator) { %>
+        <%~ it.separator %>
+    <% } %>
+    
     <!-- endDate -->
     <% if(it.settings?.labels?.general?.endDate) { %>
         <label>

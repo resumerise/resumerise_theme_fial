@@ -1,8 +1,8 @@
-<section id="skills">
+<section class="skills section" id="skills">
 	<% if(it.resume.settings?.labels?.categoryProperty?.skill?.categoryTitle) { %>
-		<h1>
+		<h3 class="section__title r">
 			<%= it.resume.settings.labels.categoryProperty.skill.categoryTitle %>
-		</h1>
+		</h3>
 	<% } %>
 	<% it.resume?.skills.forEach(function(skill) { %>
 		<div class="item content">
