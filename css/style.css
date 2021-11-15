@@ -318,4 +318,35 @@ img {
 	}
 }
 
-@media print {}
+@media print {
+	.main__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 5rem;
+		column-gap: var(--mb-2);
+	}
+	.home {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.home__wrapper {
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 5rem
+	}
+	.r {
+		margin-right: 0 !important;
+		text-align: right !important;
+	}
+	#r {
+		text-align: right;
+	}
+	.l {
+		margin-left: 0;
+	}
+	.left li {
+		direction: rtl;
+	}
+}
