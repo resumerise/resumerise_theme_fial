@@ -8,12 +8,8 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 				value: project.title,
-				id: 'project-title',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-				value: project.client,
-				id: 'project-client',
+				showLabel: false,
+				id: 'wrapper__title',
 			}) %>
 			<%~ include('date-range', {
 				formatDate: it.formatDate,
@@ -23,13 +19,22 @@
 				settings: it.resume.settings
 			}) %>
 			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+				value: project.client,
+				showLabel: false,
+				id: 'wrapper__subtitle',
+			}) %>
+			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 				value: project.summary,
-				id: 'project-summary',
+				showLabel: false,
+				id: 'wrapper__description',
 			}) %>
+		
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
 				value: project.website,
+				showLabel: false,
 				id: 'project-website',
 			}) %>
 			<%~ include('list', {

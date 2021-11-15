@@ -1,6 +1,6 @@
- <section class="education section" id="education">
+ <section class="education l section" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h3 class="section__title r">
+		<h3 class="section__title l">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</h1>
 	<% } %>
@@ -9,6 +9,12 @@
 			<% it.resume?.education.forEach(function(education) { %>
 				<div class="education__card">
 					<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
+						value: education.institution,
+						id: 'wrapper__title',
+						showLabel: false,
+					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate, 
 						startDate: education.startDate,
@@ -18,24 +24,21 @@
 						settings: it.resume.settings
 					}) %>
 					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
-						value: education.institution,
-						id: 'education-institution',
-						classes: 'education-institution'
-					}) %>
-					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 						value: education.area,
-						id: 'education-area',
+						showLabel: false,
+						id: 'wrapper__subtitle',
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.studyType, 
 						value: education.studyType,
+						showLabel: false,
 						id: 'education-studyType',
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.gpa, 
 						value: education.gpa,
+						showLabel: false,
 						id: 'education-gpa',
 					}) %>
 					<%~ include('list', {

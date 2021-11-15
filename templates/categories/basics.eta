@@ -1,5 +1,5 @@
 <section class="home home__container">
-    <div class="box2">
+    <div class="home__wrapper">
         <%~ include('profile-picture', {
             picture: it.resume.basics.picture
         }) %>
@@ -8,31 +8,35 @@
             <h4 class="home___subtitle">Graphic Designer</h4>
         </div>
     </div>
-    <div class="box3">
+    <div>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h1 class="section__title black center"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+            <h1 class="section__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
         <% } %>
-        <div class="contact__container">
+        <div class="home__container bd-grid">
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
                 value: it.resume.basics.website,
-                classes: 'information__container',
+                showLabel: false,
+                id: 'home__item',
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
                 value: it.resume.basics.email,
-                classes: 'information__container',
+                showLabel: false,
+                id: 'home__item',
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
                 value: it.resume.basics.phone,
-                classes: 'information__container',
+                showLabel: false,
+                id: 'home__item',
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 
                 value: it.resume.basics.summary,
-                classes: 'information__container last',
+                showLabel: false,
+                id: 'home__item',
             }) %>
         </div>
     </div>
