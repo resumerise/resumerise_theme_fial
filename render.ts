@@ -5,6 +5,9 @@ import {
   getFileContent,
   getNavTemplatePath,
   getWidgetCSSFilePath,
+  getWidgetDateRangeFilePath,
+  getWidgetKeyValuePairFilePath,
+  getWidgetListFilePath,
 } from "resumerise_library/mod.ts";
 import { Resume } from "resumerise_library/codegen/model/resume.ts";
 import { format } from "https://deno.land/std@0.102.0/datetime/mod.ts";
@@ -27,8 +30,7 @@ export const render = async (
       "./templates/layout.eta",
       import.meta.url,
     );
-    const mainCss = await getFileContent("./css/main.css", import.meta.url);
-    const customCss = await getFileContent("./css/custom.css", import.meta.url);
+    const mainCss = await getFileContent("./css/style.css", import.meta.url);
 
     const awardTemplateName = "awards";
     eta.templates.define(
@@ -177,10 +179,7 @@ export const render = async (
     eta.templates.define(
       dateRangeTemplateName,
       eta.compile(
-        await getFileContent(
-          "./templates/widgets/date-range.eta",
-          import.meta.url,
-        ),
+        await getWidgetDateRangeFilePath(),
       ),
     );
 
@@ -188,10 +187,7 @@ export const render = async (
     eta.templates.define(
       keyValueTemplateName,
       eta.compile(
-        await getFileContent(
-          "./templates/widgets/key-value-item.eta",
-          import.meta.url,
-        ),
+        await getWidgetKeyValuePairFilePath(),
       ),
     );
 
@@ -199,7 +195,7 @@ export const render = async (
     eta.templates.define(
       listTemplateName,
       eta.compile(
-        await getFileContent("./templates/widgets/list.eta", import.meta.url),
+        await getWidgetListFilePath(),
       ),
     );
 
@@ -266,8 +262,7 @@ export const render = async (
       orderedMap.set(resumeCategory, map.get(resumeCategory)!);
     });
     const result = await eta.render(layout, {
-      mainCss: mainCss,
-      customCss: customCss,
+      css: mainCss,
       widgetCss: widgetCss,
       formatDate: formatDate,
       resume: resume,

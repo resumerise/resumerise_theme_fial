@@ -1,6 +1,6 @@
-<section class="publications section" id="publications">
+<section class="publications" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<h3 class="section__title l">
+		<h3 class="section__title">
 		    <%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %>
 		</h3>
 	<% } %>
@@ -8,30 +8,29 @@
         <div class="item content">
             <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.publication, id: publication.id, showDelete: true}) %>
             <%~ include('key-value-item', {
-                label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
-                value: publication.name,
-                id: 'publication-name',
-            }) %>
-            <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
                 value: publication.publisher,
-                id: 'publication-publisher',
-            }) %>
+                showLabel: false,
+                classes: 'wrapper__title'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
                 value: it.formatDate(publication.releaseDate, it.resume.settings),
-                id: 'publication-releaseDate',
-            }) %>
+                showLabel: false}) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
+                value: publication.name,
+                showLabel: false,
+                classes: 'wrapper__subtitle'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
                 value: publication.website,
-                id: 'publication-website',
-            }) %>
+                showLabel: false,
+                }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.summary, 
                 value: publication.summary,
-                id: 'publication-summary',
-            }) %>
+                showLabel: false,
+                classes: 'wrapper__description'}) %>
         </div>
 	<% }) %>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.publication}) %>

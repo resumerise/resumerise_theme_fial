@@ -9,31 +9,107 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 		
 		<style>
-			<%= it.mainCss %>
+			<%= it.css %>
 			<%= it.customCss %>
 			<%= it.widgetCss %>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-body{
-font-family: 'Poppins', sans-serif;
-}
+
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+		body {
+			font-family: 'Poppins', sans-serif;
+		}
+
 		</style>
 
 
 	</head>
 	<body>
-		<div class="l-main bd-container">
-			
-			<% it.templates.forEach(function(template){ %>
-				<%~ include(template, {
+		<div class="lmain bd-container">
+				<!-- BASICS -->
+				<%~ include("basic", {
 					resume: it.resume,
 					formatDate: it.formatDate
 				}) %>
-			<% }) %>
+
+			<div class="main__wrapper">
+				<div class="left">
+
+					<!-- AWARDS -->
+					<%~ include("awards", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- PROFILE -->
+					<%~ include("profile", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- LANGUAGE -->
+					<%~ include("language", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- VOLUNTEER -->
+					<%~ include("volunteer", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<!-- PUBLICATION -->
+					<%~ include("publication", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+						<!-- REFERENCE -->
+					<%~ include("reference", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+
+					<!-- CERTIFICATION -->
+					<%~ include("certification", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+				</div>
+				<div class="right">
+				
+					<!-- WORK -->
+					<%~ include("work", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+
+					<!-- PROJECT -->
+					<%~ include("project", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- EDUCATION -->
+					<%~ include("education", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- SKILLS -->
+					<%~ include("skills", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+					<!-- INTEREST -->
+					<%~ include("interest", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
