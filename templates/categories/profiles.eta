@@ -1,6 +1,6 @@
-<section class="profiles r section" id="profiles">
+<section class="profiles" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <h3 class="section__title r">
+        <h3 class="section__title">
             <%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %>
         </h3>
     <% } %>
@@ -11,20 +11,17 @@
                 label: it.resume.settings?.labels?.categoryProperty?.profile?.network, 
                 value: profile.network,
                 showLabel: false,
-                id: 'wrapper__semi-subtitle',
-            }) %>
+                classes: 'wrapper__title'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.profile?.username, 
                 value: profile.username,
                 showLabel: false,
-                id: 'profile-username',
-            }) %>
+                }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.profile?.url, 
                 value: profile.url,
                 showLabel: false,
-                id: 'profile-url',
-            }) %>
+                }) %>
         </div>
     <% }) %>
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.profile}) %>

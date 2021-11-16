@@ -1,6 +1,6 @@
-<section class="awards r section" id="awards">
+<section class="awards" id="awards">
 	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
-		<h3 class="section__title r">
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.award.categoryTitle %>
 		</h3>
 	<% } %>
@@ -13,26 +13,21 @@
 					label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
 					value: award.title,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
 					value: it.formatDate(award.date, it.resume.settings),
-					showLabel: false,
-					id: 'award-date',
-				}) %>
+					showLabel: false}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
 					value: award.awarder,
 					showLabel: false,
-					id: 'wrapper__subtitle',
-				}) %>
+					classes: 'wrapper__subtitle'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
 					value: award.summary,
 					showLabel: false,
-					id: 'wrapper__description',
-				}) %>
+					classes: 'wrapper__description'}) %>
 			<% }) %>
 		</div>
 	<% } %>

@@ -1,6 +1,6 @@
-<section class="publications r section" id="publications">
+<section class="publications" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<h3 class="section__title r">
+		<h3 class="section__title">
 		    <%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %>
 		</h3>
 	<% } %>
@@ -11,32 +11,26 @@
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
                 value: publication.publisher,
                 showLabel: false,
-                id: 'wrapper__title',
-            }) %>
+                classes: 'wrapper__title'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
                 value: it.formatDate(publication.releaseDate, it.resume.settings),
-                id: 'publication-releaseDate',
-                showLabel: false,
-            }) %>
+                showLabel: false}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
                 value: publication.name,
                 showLabel: false,
-                id: 'wrapper__subtitle',
-            }) %>
+                classes: 'wrapper__subtitle'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
                 value: publication.website,
                 showLabel: false,
-                id: 'publication-website',
-            }) %>
+                }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.summary, 
                 value: publication.summary,
                 showLabel: false,
-                id: 'wrapper__description',
-            }) %>
+                classes: 'wrapper__description'}) %>
         </div>
 	<% }) %>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.publication}) %>

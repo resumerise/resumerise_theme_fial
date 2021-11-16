@@ -1,6 +1,6 @@
-<section class="references r section" id="references">
+<section class="references" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<h3 class="section__title r">
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %>
 		</h3>
 	<% } %>
@@ -11,14 +11,12 @@
 				label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 				value: reference.name,
 				showLabel: false,
-				id: 'wrapper__semi-subtitle',
-			}) %>
+				classes: 'wrapper__title'}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 				value: reference.reference,
 				showLabel: false,
-				id: 'wrapper__description',
-			}) %>
+				classes: 'wrapper__description'}) %>
 		</div>
 	<% }) %>
 	<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference}) %>

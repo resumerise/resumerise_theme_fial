@@ -1,6 +1,6 @@
-<section class="languages r section" id="languages">
+<section class="languages" id="languages">
 	<% if(it.resume.settings?.labels?.categoryProperty?.language?.categoryTitle) { %>
-		<h1 class="section__title r">
+		<h1 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.language.categoryTitle %>
 		</h1>
 	<% } %>
@@ -12,13 +12,11 @@
 					label: it.resume.settings?.labels?.categoryProperty?.language?.language, 
 					value: language.language,
 					showLabel: false,
-					id: 'wrapper__semi-subtitle',
-				}) %>
+					classes: 'wrapper__semi-subtitle'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.language?.fluency, 
 					value: language.fluency,
-					showLabel: false,
-					id: 'language-fluency',
+					showLabel: false
 				}) %>
 			</div>
 		<% }) %>

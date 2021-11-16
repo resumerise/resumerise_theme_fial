@@ -4,8 +4,8 @@
             picture: it.resume.basics.picture
         }) %>
         <div class="home__data">
-            <h2 class="home___title">Cia <br> Rodriguez</h2>
-            <h4 class="home___subtitle">Graphic Designer</h4>
+            <h2 class="home__title">Cia <br> Rodriguez</h2>
+            <h4 class="home__subtitle">Graphic Designer</h4>
         </div>
     </div>
     <div>
@@ -17,26 +17,22 @@
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
                 value: it.resume.basics.website,
-                showLabel: false,
-                id: 'home__item',
+                showLabel: false
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
                 value: it.resume.basics.email,
-                showLabel: false,
-                id: 'home__item',
+                showLabel: false
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
                 value: it.resume.basics.phone,
-                showLabel: false,
-                id: 'home__item',
+                showLabel: false
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 
                 value: it.resume.basics.summary,
-                showLabel: false,
-                id: 'home__item',
+                showLabel: false
             }) %>
         </div>
     </div>

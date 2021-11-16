@@ -112,42 +112,40 @@ img {
 
 /*========== CLASS CSS ==========*/
 
-.section {
+section {
 	padding: 3rem 0;
 }
 
 .section__title {
-	position: relative;
+	display: inline-block;
 	font-size: var(--h2-font-size);
 	color: var(--white-color);
 	font-weight: var(--font-semi-bold);
 	background-color: var(--first-color-alt);
 	text-transform: uppercase;
 	padding: .5rem 1rem;
-	width: fit-content;
 	text-align: center;
 	letter-spacing: 1px;
-	margin: auto;
 	margin-bottom: var(--mb-1-5);
 }
 
-#wrapper__title {
+.wrapper__title {
 	font-weight: var(--font-semi-bold);
-	font-size: var(--h1-font-size);
+	font-size: var(--h3-font-size);
 	color: black;
 	margin: var(--mb-1-5) 0 0;
 }
 
-#wrapper__subtitle {
+.wrapper__subtitle {
 	font-weight: var(--font-medium);
 }
 
-#wrapper__semi-subtitle {
+.wrapper__semi-subtitle {
 	font-weight: var(--font-medium);
 	font-size: var(--h3-font-size);
 }
 
-#wrapper__description {
+.wrapper__description {
 	margin: var(--mb-0-5) 0;
 }
 
@@ -227,20 +225,20 @@ img {
 	margin: var(--mb-1) 0;
 }
 
-.home___title {
+.home__title {
 	font-size: var(--bigger-font-size);
 	font-weight: 800;
 	line-height: 1;
 }
 
-.home___subtitle {
+.home__subtitle {
 	font-size: var(--h2-font-size);
 	margin: 0;
 	font-weight: 300;
 	letter-spacing: 5px;
 }
 
-.home___title, .home___subtitle, #home__item {
+.home__title, .home__subtitle {
 	text-align: center;
 }
 
@@ -259,7 +257,7 @@ img {
 	text-align: center;
 }
 
-.date label, #wrapper__title label, #wrapper__subtitle label, #wrapper__semi-subtitle label, #wrapper__description label, #project-website label, #publication-website label, #publication-releaseDate label, #skill-name label, #skill-level label, #interests label, #awards label, #references label, #volunteer-website label, #certifications label, #profiles label, #education-studyType label, #education-gpa label, .home__container label, #work-position label, #work-website label {
+label {
 	display: none;
 }
 
@@ -293,8 +291,7 @@ img {
 		margin-bottom: 5rem;
 		column-gap: var(--mb-2);
 	}
-	.home___title,
-	.home___subtitle{
+	.home__title, .home__subtitle {
 		text-align: initial;
 	}
 	.home {
@@ -308,14 +305,11 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 5rem
 	}
-	.r {
+	.left * {
 		margin-right: 0 !important;
 		text-align: right !important;
 	}
-	#r {
-		text-align: right;
-	}
-	.l {
+	.right * {
 		margin-left: 0;
 	}
 	.left li {
@@ -330,8 +324,7 @@ img {
 		margin-bottom: 5rem;
 		column-gap: var(--mb-2);
 	}
-	.home___title,
-	.home___subtitle{
+	.home__title, .home__subtitle {
 		text-align: initial;
 	}
 	.home {

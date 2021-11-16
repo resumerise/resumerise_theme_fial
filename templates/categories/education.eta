@@ -1,6 +1,6 @@
- <section class="education l section" id="education">
+ <section class="education" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h3 class="section__title l">
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</h1>
 	<% } %>
@@ -12,7 +12,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 						value: education.institution,
-						id: 'wrapper__title',
+						classes: 'wrapper__title',
 						showLabel: false,
 					}) %>
 					<%~ include('date-range', {
@@ -27,24 +27,21 @@
 						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 						value: education.area,
 						showLabel: false,
-						id: 'wrapper__subtitle',
+						classes: 'wrapper__subtitle',
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.studyType, 
 						value: education.studyType,
 						showLabel: false,
-						id: 'education-studyType',
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.gpa, 
 						value: education.gpa,
 						showLabel: false,
-						id: 'education-gpa',
 					}) %>
 					<%~ include('list', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.courses, 
 						data: education.courses,
-						id: 'education-courses',
 					}) %>
 				</div>
 			<% }) %>

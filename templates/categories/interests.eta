@@ -1,6 +1,6 @@
-<section class="interests section" id="interests">
+<section class="interests " id="interests">
 	<% if(it.resume.settings?.labels?.categoryProperty?.interest?.categoryTitle) { %>
-		<h3 class="section__title l">
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %>
 		</h3>
 	<% } %>
@@ -11,14 +11,11 @@
 				label: it.resume.settings?.labels?.categoryProperty?.interest?.name, 
 				value: interest.name,
 				showLabel: false,
-				id: 'wrapper__semi-subtitle',
-			}) %>
+				classes: 'wrapper__title'}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.interest?.keywords, 
 				data: interest.keywords,
-				showLabel: false,
-				id: 'interest-keywords',
-			}) %>
+				showLabel: false}) %>
 		</div>
 	<% }) %>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.interest}) %>

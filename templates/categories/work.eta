@@ -1,14 +1,16 @@
-<section class="work l section" id="work">
+<section class="work" id="work">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <h3 class="section__title l"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
+        <h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
     <% it.resume?.work.forEach(function(work) { %>
     <div class="work__container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
         <% if (work.company) { %>
-        <h4 id="wrapper__title">
-            <%= work.company %>
-        </h4>
+        <%~ include('key-value-item', {
+            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+            value: work.company,
+            showLabel: false,
+            classes: 'wrapper__title'}) %>
         <% } %>
         <%~ include('date-range', {
             formatDate: it.formatDate,
@@ -22,25 +24,19 @@
             label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
             value: work.position,
             showLabel: false,
-            id: 'wrapper__subtitle',
-        }) %>
+            classes: 'wrapper__subtitle'}) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
             value: work.website,
-            showLabel: false,
-            id: 'work-website',
-        }) %>
+            showLabel: false}) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
             value: work.summary,
             showLabel: false,
-            id: 'wrapper__description',
-        }) %>
+            classes: 'wrapper__description'}) %>
         <%~ include('list', {
 			label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
-			data: work.highlights,
-			id: 'work-highlights r',
-		}) %>
+			data: work.highlights}) %>
     </div>
     <% }) %>
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
