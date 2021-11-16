@@ -7,7 +7,8 @@
 	--header-height: 3rem;
 	/*========== Colors ==========*/
 	--first-color: hsl(23, 98%, 68%);
-	--first-color-alt: hsl(23, 98%, 60%);
+	--first-color-alt: #FF9E60;
+	/* --first-color-alt: #fd8235; PREVIOUS */
 	--first-color-light: hsl(23, 98%, 74%);
 	--title-color: hsl(23, 5%, 4%);
 	--text-color: hsl(60, 5%, 24%);
@@ -292,6 +293,10 @@ img {
 		margin-bottom: 5rem;
 		column-gap: var(--mb-2);
 	}
+	.home___title,
+	.home___subtitle{
+		text-align: initial;
+	}
 	.home {
 		display: flex;
 		flex-direction: column;
@@ -324,6 +329,10 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 5rem;
 		column-gap: var(--mb-2);
+	}
+	.home___title,
+	.home___subtitle{
+		text-align: initial;
 	}
 	.home {
 		display: flex;

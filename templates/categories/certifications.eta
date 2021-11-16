@@ -6,21 +6,21 @@
 	<div class="item content">
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 		<%~ include('key-value-item', {
+			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
+			value: certificate.issuer,
+			id: 'wrapper__title',
+			showLabel: false,
+		}) %>
+		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
 			value: certificate.title,
-			id: 'wrapper__title',
+			id: 'wrapper__subtitle',
 			showLabel: false,
 		}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
 			value: it.formatDate(certificate.issueDate, it.resume.settings),
 			id: 'certificate-issueDate',
-			showLabel: false,
-		}) %>
-		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
-			value: certificate.issuer,
-			id: 'wrapper__subtitle',
 			showLabel: false,
 		}) %>
 	</div>
