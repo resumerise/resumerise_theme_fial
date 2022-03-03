@@ -28,8 +28,7 @@
 		<div class="lmain bd-container">
 				<!-- BASICS -->
 				<%~ include("basic", {
-					resume: it.resume,
-					formatDate: it.formatDate
+					resume: it.resume
 				}) %>
 
 			<div class="main__wrapper">
@@ -37,42 +36,35 @@
 
 					<!-- AWARDS -->
 					<%~ include("awards", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- PROFILE -->
 					<%~ include("profile", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- LANGUAGE -->
 					<%~ include("language", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- VOLUNTEER -->
 					<%~ include("volunteer", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					<!-- PUBLICATION -->
 					<%~ include("publication", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 						<!-- REFERENCE -->
 					<%~ include("reference", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 
 					<!-- CERTIFICATION -->
 					<%~ include("certification", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 				</div>
@@ -80,32 +72,27 @@
 				
 					<!-- WORK -->
 					<%~ include("work", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 
 					<!-- PROJECT -->
 					<%~ include("project", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- EDUCATION -->
 					<%~ include("education", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- SKILLS -->
 					<%~ include("skills", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 					<!-- INTEREST -->
 					<%~ include("interest", {
-						resume: it.resume,
-						formatDate: it.formatDate
+						resume: it.resume
 					}) %>
 					
 				</div>

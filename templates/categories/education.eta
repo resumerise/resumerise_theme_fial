@@ -15,8 +15,7 @@
 						classes: 'wrapper__title',
 						showLabel: false,
 					}) %>
-					<%~ include('date-range', {
-						formatDate: it.formatDate, 
+					<%~ include('date-range', { 
 						startDate: education.startDate,
 						endDate: education.endDate,
 						separator: '<i class="fas fa-angle-right"></i>',

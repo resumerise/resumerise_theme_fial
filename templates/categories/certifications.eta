@@ -17,7 +17,7 @@
 			showLabel: false}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-			value: it.formatDate(certificate.issueDate, it.resume.settings),
+			value: certificate.issueDate,
 			showLabel: false}) %>
 	</div>
 	<% }) %>
