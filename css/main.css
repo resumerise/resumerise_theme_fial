@@ -1,5 +1,4 @@
-/*===== GOOGLE FONTS =====*/
-
+/*===== GOOGLE FONTS =====*
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 /*===== VARIABLES CSS =====*/
 
@@ -16,6 +15,10 @@
 	--container-color: hsl(60, 0%, 98%);
 	--container-color-alt: hsl(60, 3%, 94%);
 	--body-color: hsl(60, 0%, 99%);
+	/*
+    Font size of page margins
+    */
+    --print-margin-font-size: .9em;
 	--white-color: white;
 	/*========== FONT & TYPORGRAPHY ==========*/
 	--body-font: 'Poppins', sans-serif;
@@ -68,6 +71,11 @@
 *, ::before, ::after {
 	box-sizing: border-box;
 }
+
+.counter-reset {
+    counter-reset: page 1;
+}
+
 
 html {
 	scroll-behavior: smooth;
@@ -317,38 +325,260 @@ label {
 	}
 }
 
+/*~~~~~~~~~~~~~ print ~~~~~~~~~~~~~*/
 @media print {
-	.main__wrapper {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin-bottom: 5rem;
-		column-gap: var(--mb-2);
-	}
-	.home__title, .home__subtitle {
-		text-align: initial;
-	}
-	.home {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.home__wrapper {
-		display: grid;
-		align-items: center;
-		grid-template-columns: repeat(2, 1fr);
-		margin-bottom: 5rem
-	}
-	.r {
-		margin-right: 0 !important;
-		text-align: right !important;
-	}
-	#r {
-		text-align: right;
-	}
-	.l {
-		margin-left: 0;
-	}
-	.left li {
-		direction: rtl;
-	}
+    .profiles,
+    .basics {
+        display: none;
+    }
+
+    .pagedjs_margin {
+        font-size: var(--print-margin-font-size);
+    }
+
+    /* main margin boxes */
+    .footer-print {
+        position: running(footerRunning);
+    }
+    .user-compact-print {
+        position: running(userCompactRunning);
+    }
+    .last-update-print {
+        position: running(lastUpdateRunning);
+    }
+    .available-from-print {
+        position: running(availableFromRunning);
+    }
+    
+    @page {
+        size: A4;
+        @top-right {
+            content: element(lastUpdateRunning);
+        }
+        @top-left {
+            content: element(userCompactRunning);
+        }
+        @bottom-right {
+            content: counter(page);
+        }
+        @bottom-left {
+            content: element(footerRunning);
+            width: 40mm;
+        }
+        @bottom-center {
+            content: element(availableFromRunning);
+        }
+    }
+
+    /* table of contents */
+    @page table-of-contents {
+        @top-right {
+            content: none;
+        }
+
+        @top-left {
+            content: none;
+        }
+
+        @bottom-right {
+            content: none;
+        }
+
+        @bottom-left {
+            content: none;
+        }
+    }
+
+    .table-of-contents {
+        page: table-of-contents;
+    }
+
+    .toc-header {
+        margin-bottom: 1rem;
+        border-bottom: 0.375rem solid black;
+    }
+
+    ol, ul {
+        padding-inline-start: 0;
+    }
+
+    ol, ul a {
+        text-decoration: none;
+    }
+
+    .toc-element-level-1 {
+        font-size: 0.5cm;
+    }
+
+    .toc-element-level-2 {
+        font-size: 0.4cm;
+    }
+
+    .toc-element-level-1 a, .toc-element-level-2 a {
+        color: black;
+    }
+
+    #list-toc-generated li {
+        margin-left: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    #list-toc-generated .toc-element a::after {
+        content: target-counter(attr(href), page);
+    }
+
+    #list-toc-generated .toc-element-level-1 {
+        border-bottom: 0.0625rem solid black;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    #list-toc-generated {
+        overflow-x: hidden;
+    }
+
+    #list-toc-generated .toc-element a {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #list-toc-generated .toc-element a::after {
+        background-color: white;
+    }
+
+    .page-break {
+        break-after: page;
+    }
+
+    /* cover */
+    @page:first {
+
+        @top-right {
+            content: none;
+        }
+
+        @top-left {
+            content: none;
+        }
+
+        @bottom-right {
+            content: none;
+        }
+
+        @bottom-left {
+            content: none;
+        }
+    }
+
+    .cover-page {
+        page: cover-page;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4cm;
+        align-content: center;
+        gap: 2cm;
+    }
+
+    .cover-page .main-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4mm;
+    }
+
+    .cover-page .main-skills ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5cm;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cover-page .main-skills .list__label {
+        font-size: 14pt;
+        text-align: center;
+    }
+
+    .cover-page .main-skills li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cover-page__main-skills {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cover-page h1 {
+        text-align: center;
+    }
+
+    .cover-page h3 {
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .cover-page .picture {
+        text-align: center;
+    }
+
+    .cover-page__header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 3mm;
+    }
+
+    .cover-page__header .picture img {
+        height: 8cm;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .cover-page__contact {
+        font-size: 10pt;
+        display: flex;
+        flex-direction: row;
+        gap: 0.7cm;
+    }
+
+    .cover-page__social {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .cover-page__social .icon {
+        font-size: 16pt;
+    }
+
+    .cover-page__header .summary {
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    /* availability */    
+    .available-from-print .icon {
+        margin-top: 1.5mm;
+        margin-left: 1.5mm;
+        font-size: 2mm;
+        position: absolute;
+    }
+    
+    .available-from-print.now-available-yes i {
+        color: green;
+    }
+    
+    .available-from-print.now-available-no i {
+        color: red;
+    }
 }

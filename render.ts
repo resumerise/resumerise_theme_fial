@@ -23,7 +23,7 @@ export const render = async (
       "./templates/layout.eta",
       import.meta.url,
     );
-    const mainCss = await getFileContent("./css/style.css", import.meta.url);
+    const mainCss = await getFileContent("./css/main.css", import.meta.url);
 
     const awardTemplateName = "awards";
     eta.templates.define(
