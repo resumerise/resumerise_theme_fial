@@ -2,41 +2,43 @@
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
         <h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
+
     <% it.resume?.work.forEach(function(work) { %>
-    <div class="work__container">
-        <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
-        <% if (work.company) { %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-            value: work.company,
-            showLabel: false,
-            classes: 'wrapper__title'}) %>
-        <% } %>
-        <%~ include('date-range', {
-            startDate: work.startDate,
-            endDate: work.endDate,
-            present: work.present,
-            showLabel: false,
-            settings: it.resume.settings
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-            value: work.position,
-            showLabel: false,
-            classes: 'wrapper__subtitle'}) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-            value: work.website,
-            showLabel: false}) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
-            value: work.summary,
-            showLabel: false,
-            classes: 'wrapper__description'}) %>
-        <%~ include('list', {
-			label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
-			data: work.highlights}) %>
-    </div>
+        <div class="work__container">
+            <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
+            <% if (work.company) { %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                value: work.company,
+                showLabel: false,
+                classes: 'wrapper__title'}) %>
+            <% } %>
+            <%~ include('date-range', {
+                startDate: work.startDate,
+                endDate: work.endDate,
+                present: work.present,
+                showLabel: false,
+                settings: it.resume.settings
+            }) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                value: work.position,
+                showLabel: false,
+                classes: 'wrapper__subtitle'}) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                value: work.website,
+                showLabel: false}) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
+                value: work.summary,
+                showLabel: false,
+                classes: 'wrapper__description'}) %>
+            <%~ include('list', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
+                data: work.highlights}) %>
+        </div>
     <% }) %>
+    
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 </section>

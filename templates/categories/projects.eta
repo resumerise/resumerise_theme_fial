@@ -2,6 +2,7 @@
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
 		<h1 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></h1>
 	<% } %>
+
 	<% it.resume?.projects.forEach(function(project) { %>
 		<div class="item content">
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
@@ -46,5 +47,6 @@
 			}) %>
 		</div>
 	<% }) %>
+	
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.project}) %>
 </section>

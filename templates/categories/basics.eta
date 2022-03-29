@@ -3,16 +3,19 @@
         <%~ include('profile-picture', {
             picture: it.resume.basics.picture
         }) %>
+
         <div class="home__data">
             <h2 class="home__title">Cia <br> Rodriguez</h2>
             <h4 class="home__subtitle">Graphic Designer</h4>
         </div>
     </div>
+
     <div>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
             <h1 class="section__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
         <% } %>
+        
         <div class="home__container bd-grid">
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 

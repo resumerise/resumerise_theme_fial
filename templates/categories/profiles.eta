@@ -1,9 +1,8 @@
 <section class="profiles" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <h3 class="section__title">
-            <%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %>
-        </h3>
+        <h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></h3>
     <% } %>
+
     <% it.resume.basics.profiles?.forEach(function(profile){ %>
         <div class='item content'>
             <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.profile, showDelete: true, id: profile.id}) %>
@@ -24,5 +23,6 @@
                 }) %>
         </div>
     <% }) %>
+    
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.profile}) %>
 </section>

@@ -1,9 +1,8 @@
 <section class="references" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<h3 class="section__title">
-			<%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %>
-		</h3>
+		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></h3>
 	<% } %>
+
 	<% it.resume?.references.forEach(function(reference) { %>
 		<div class="item content">
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference, id: reference.id, showDelete: true}) %>
@@ -19,5 +18,6 @@
 				classes: 'wrapper__description'}) %>
 		</div>
 	<% }) %>
+
 	<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference}) %>
 </section>

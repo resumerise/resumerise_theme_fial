@@ -1,9 +1,8 @@
 <section class="languages" id="languages">
 	<% if(it.resume.settings?.labels?.categoryProperty?.language?.categoryTitle) { %>
-		<h1 class="section__title">
-			<%= it.resume.settings.labels.categoryProperty.language.categoryTitle %>
-		</h1>
+		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.language.categoryTitle %></h3>
 	<% } %>
+
 	<div class="languages__container bd-grid">
 		<% it.resume?.languages.forEach(function(language) { %>
 			<div class="wrapper">
@@ -21,5 +20,6 @@
 			</div>
 		<% }) %>
 	</div>
+	
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.language}) %>
 </section>

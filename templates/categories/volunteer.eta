@@ -1,9 +1,8 @@
 <section class="volunteer" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
-		<h3 class="section__title">
-			<%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %>
-		</h3>
+		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></h3>
 	<% } %>
+
 	<% it.resume?.volunteer.forEach(function(volunteer) { %>
 		<div class="item content">
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
@@ -37,5 +36,6 @@
 				data: volunteer.highlights}) %>
 		</div>
 	<% }) %>
+	
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer}) %>
 </section>

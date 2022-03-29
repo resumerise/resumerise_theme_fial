@@ -2,24 +2,26 @@
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
 		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h3>
 	<% } %>
+	
 	<% it.resume?.certifications.forEach(function(certificate) { %>
-	<div class="item content">
-		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
-		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
-			value: certificate.issuer,
-			classes: 'wrapper__title',
-			showLabel: false}) %>
-		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
-			value: certificate.title,
-			classes: 'wrapper__subtitle',
-			showLabel: false}) %>
-		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-			value: certificate.issueDate,
-			showLabel: false}) %>
-	</div>
+		<div class="item content">
+			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
+			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
+				value: certificate.issuer,
+				classes: 'wrapper__title',
+				showLabel: false}) %>
+			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
+				value: certificate.title,
+				classes: 'wrapper__subtitle',
+				showLabel: false}) %>
+			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
+				value: certificate.issueDate,
+				showLabel: false}) %>
+		</div>
 	<% }) %>
+
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 </section>

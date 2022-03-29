@@ -8,6 +8,7 @@
         <h3><%= it.resume.basics.label %></h3>
         <p class="summary"><%= it.resume.basics.summary %></p>
     </div>
+
     <div class="cover-page__contact">
         <%~ include('key-url-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
@@ -28,6 +29,7 @@
             iconClass: 'fas fa-phone'
         }) %>
     </div>
+
     <% if (it.resume.skills?.length) { %>
         <div class="article__list main-skills">
             <label class="list__label">
@@ -40,6 +42,7 @@
             </ul>
         </div>
     <% } %>
+    
     <div class="cover-page__social">
         <% it.resume.basics.profiles?.forEach(function(profile){ %>
             <%~ include('profile-item', {

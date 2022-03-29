@@ -1,9 +1,8 @@
  <section class="education" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h3 class="section__title">
-			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
-		</h1>
+		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></h3>
 	<% } %>
+
 	<% if(it.resume?.education) { %>
 		<div class="education__container">
 			<% it.resume?.education.forEach(function(education) { %>
@@ -46,5 +45,6 @@
 			<% }) %>
 		</div>
 	<% } %>
+	
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.education}) %>
 </section>
