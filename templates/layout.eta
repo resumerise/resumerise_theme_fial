@@ -12,7 +12,7 @@
 		
 		<style>
 			<%= it.mainCss %>
-			<%= it.widgetCss %>
+			<% /* <%= it.widgetCss %> */ %>
 		</style>
 	</head>
 	<body>
