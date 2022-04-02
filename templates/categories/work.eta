@@ -13,22 +13,43 @@
                 showLabel: false,
                 classes: 'wrapper__title'}) %>
             <% } %>
-            <%~ include('date-range', {
-                startDate: work.startDate,
-                endDate: work.endDate,
-                present: work.present,
-                showLabel: false,
-                settings: it.resume.settings
-            }) %>
-            <%~ include('key-value-item', {
-                label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-                value: work.position,
-                showLabel: false,
-                classes: 'wrapper__subtitle'}) %>
-            <%~ include('key-value-item', {
-                label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-                value: work.website,
-                showLabel: false}) %>
+
+            <div class="article__date">
+                <%~ include('date-range', {
+                    startDate: work.startDate,
+                    endDate: work.endDate,
+                    present: work.present,
+                }) %>
+                <%~ include('key-value-item', {
+                    label: it.resume.settings?.labels?.durationLabel, 
+                    value: work.durationLabel,
+                    classes: 'article__text duration'
+                }) %>
+            </div>
+
+            <div class="img-flex">
+                <div>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                        value: work.position,
+                        showLabel: false,
+                        classes: 'wrapper__subtitle'}) %>
+
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                        value: work.website,
+                        showLabel: false}) %>
+                </div>
+            
+                <div>
+                    <% if (work.logo) { %>
+                        <div class="article__img">
+                            <img src="<%~ work.logo %>">
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
                 value: work.summary,

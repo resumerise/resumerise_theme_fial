@@ -3,7 +3,7 @@
 		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.language.categoryTitle %></h3>
 	<% } %>
 
-	<div class="languages__container bd-grid">
+	<div class="article-container grid">
 		<% it.resume?.languages.forEach(function(language) { %>
 			<div class="wrapper">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.language, showDelete: true, id: language.id}) %>

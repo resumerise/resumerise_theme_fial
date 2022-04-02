@@ -4,29 +4,34 @@
 	<% } %>
 
 	<% if(it.resume?.awards) { %>
-		<div class="category-container">
+		<div class="article-container grid">
 			<% it.resume?.awards.forEach(function(award) { %>
-			<div class="item content">
-				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
-					value: award.title,
-					showLabel: false,
-					classes: 'wrapper__title'}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-					value: award.date,
-					showLabel: false}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
-					value: award.awarder,
-					showLabel: false,
-					classes: 'wrapper__subtitle'}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
-					value: award.summary,
-					showLabel: false,
-					classes: 'wrapper__description'}) %>
+				<div class="item content">
+					<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
+						value: award.title,
+						showLabel: false,
+						classes: 'wrapper__title'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
+						value: award.date,
+						showLabel: false
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
+						value: award.awarder,
+						showLabel: false,
+						classes: 'wrapper__subtitle'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
+						value: award.summary,
+						showLabel: false,
+						classes: 'wrapper__description'
+					}) %>
+				</div>
 			<% }) %>
 		</div>
 	<% } %>

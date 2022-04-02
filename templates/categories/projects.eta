@@ -11,28 +11,48 @@
 				value: project.title,
 				showLabel: false,
 				classes: 'wrapper__title'}) %>
-			<%~ include('date-range', {
-				startDate: project.startDate,
-				endDate: project.endDate,
-				present: project.present,
-				settings: it.resume.settings
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-				value: project.client,
-				showLabel: false,
-				classes: 'wrapper__subtitle'}) %>
+			<div class="article__date">
+				<%~ include('date-range', {
+					startDate: project.startDate,
+					endDate: project.endDate,
+					present: project.present,
+				}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.durationLabel, 
+					value: project.durationLabel,
+					classes: 'article__text duration'
+				}) %>
+			</div>
+
+			<div class="img-flex">
+				<div>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+						value: project.client,
+						showLabel: false,
+						classes: 'wrapper__subtitle'}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
+						value: project.website,
+						showLabel: false,
+						classes: 'project-website'}) %>
+				</div>
+
+				<div>
+					<% if (project.logo) { %>
+						<div class="article__img">
+							<img src="<%~ project.logo %>">
+						</div>
+					<% } %>
+				</div>
+			</div>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 				value: project.summary,
 				showLabel: false,
 				classes: 'wrapper__description'}) %>
 		
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
-				value: project.website,
-				showLabel: false,
-				classes: 'project-website'}) %>
+			
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.products, 
 				data: project.products
@@ -45,6 +65,21 @@
 				label: it.resume.settings?.labels?.categoryProperty?.project?.highlights, 
 				data: project.highlights
 			}) %>
+			<% if (project.otherUrls) { %>
+				<div class="article__list other-urls">
+					<label class="list__label">
+						<%= it.resume.settings?.labels?.otherUrls %>
+					</label>
+					<ul>
+						<% project.otherUrls.forEach(function(link){ %>
+							<li>
+								<div><%= link.label %></div>
+								<div><a class="article__url" href="<%= link.url %>"><%= link.url %></a></div>
+							</li>
+						<% }) %>
+					</ul>
+				</div>
+			<% } %>
 		</div>
 	<% }) %>
 	

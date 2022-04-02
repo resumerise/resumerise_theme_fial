@@ -14,13 +14,20 @@
 						classes: 'wrapper__title',
 						showLabel: false,
 					}) %>
-					<%~ include('date-range', { 
-						startDate: education.startDate,
-						endDate: education.endDate,
-						separator: '<i class="fas fa-angle-right"></i>',
-						present: education.present,
-						settings: it.resume.settings
-					}) %>
+
+					<div class="article__date">
+						<%~ include('date-range', {
+							startDate: education.startDate,
+							endDate: education.endDate,
+							present: education.present,
+						}) %>
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.durationLabel, 
+							value: education.durationLabel,
+							classes: 'article__text duration'
+						}) %>
+					</div>
+					
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 						value: education.area,

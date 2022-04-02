@@ -1,22 +1,24 @@
-<section class="interests " id="interests">
+<section class="interests" id="interests">
 	<% if(it.resume.settings?.labels?.categoryProperty?.interest?.categoryTitle) { %>
 		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %></h3>
 	<% } %>
 
-	<% it.resume?.interests.forEach(function(interest) { %>
-		<div class="item content">
-			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.interest, showDelete: true, id: interest.id}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.interest?.name, 
-				value: interest.name,
-				showLabel: false,
-				classes: 'wrapper__title'}) %>
-			<%~ include('list', {
-				label: it.resume.settings?.labels?.categoryProperty?.interest?.keywords, 
-				data: interest.keywords,
-				showLabel: false}) %>
-		</div>
-	<% }) %>
+	<div class="article-container grid">
+		<% it.resume?.interests.forEach(function(interest) { %>
+			<div class="item content">
+				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.interest, showDelete: true, id: interest.id}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.interest?.name, 
+					value: interest.name,
+					showLabel: false,
+					classes: 'wrapper__title'}) %>
+				<%~ include('list', {
+					label: it.resume.settings?.labels?.categoryProperty?.interest?.keywords, 
+					data: interest.keywords,
+					showLabel: false}) %>
+			</div>
+		<% }) %>
+	</div>
 
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.interest}) %>
 </section>

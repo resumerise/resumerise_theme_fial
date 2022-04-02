@@ -20,7 +20,7 @@
 
 	</head>
 	<body>
-		<main class="l-main bd-container">
+		<main class="main">
 			<% if (it.type === 'PRINT') { %>
 				<!-- cover Page -->
 				<%~ include("cover", {

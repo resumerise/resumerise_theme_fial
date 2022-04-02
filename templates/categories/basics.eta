@@ -13,10 +13,10 @@
     <div>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h1 class="section__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+            <h1 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
         <% } %>
         
-        <div class="home__container bd-grid">
+        <div class="home__container grid">
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
                 value: it.resume.basics.website,
