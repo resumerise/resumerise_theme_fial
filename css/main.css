@@ -450,6 +450,8 @@ label {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 5rem;
         column-gap: 2rem;
+        max-width: 1300px;
+        margin: auto;
     }
 
     .home__title, .home__subtitle {
