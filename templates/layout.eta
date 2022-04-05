@@ -14,8 +14,8 @@
 		<% } %>
 
 		<style>
-			<%= it.mainCss %>
-			<%= it.widgetCss %>
+			<%~ it.mainCss %>
+			<%~ it.widgetCss %>
 		</style>
 
 	</head>
