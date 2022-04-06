@@ -750,13 +750,6 @@ label {
         color: black !important;
     }
 
-    .cover-page .cover-page__contact,
-    .cover-page .cover-page__contact>* {
-        font-size: var(--small-font-size);
-        -webkit-print-color-adjust: exact;
-        color: black !important;
-    }
-
     .cover-page .picture {
         text-align: center;
     }
@@ -779,8 +772,18 @@ label {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.5cm;
+        gap: .7rem;
         margin-top: 1rem;
+        font-size: var(--smaller-font-size);
+        -webkit-print-color-adjust: exact;
+        color: black !important;
+    }
+    
+    .cover-page__contact * {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .3rem;
     }
 
     .cover-page__social {
