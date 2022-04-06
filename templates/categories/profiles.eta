@@ -1,30 +1,20 @@
 <section class="profiles" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></h3>
+        <h3 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></h3>
     <% } %>
 
-    <div class="article-container grid">
+    <div class="article-container">
         <% it.resume.basics.profiles?.forEach(function(profile){ %>
-            <div class='item content'>
+            <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.profile, showDelete: true, id: profile.id}) %>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.profile?.network, 
-                    value: profile.network,
-                    showLabel: false,
-                    classes: 'wrapper__title'}) %>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.profile?.username, 
-                    value: profile.username,
-                    showLabel: false,
-                    }) %>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.profile?.url, 
-                    value: profile.url,
-                    showLabel: false,
-                    }) %>
-            </div>
+                <%~ include('profile-item', {
+                    label: profile.network,
+                    url: profile.url,
+                    classes: 'fab'
+                }) %>
+            </article>
         <% }) %>
+        
+        <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.profile}) %>
     </div>
-    
-    <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.profile}) %>
 </section>

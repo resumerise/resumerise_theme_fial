@@ -59,11 +59,6 @@
 						resume: it.resume
 					}) %>
 					
-					<!-- PROFILE -->
-					<%~ include("profile", {
-						resume: it.resume
-					}) %>
-					
 					<!-- LANGUAGE -->
 					<%~ include("language", {
 						resume: it.resume
@@ -86,6 +81,16 @@
 					<%~ include("certification", {
 						resume: it.resume
 					}) %>
+
+					<!-- PROFILE -->
+					<%~ include("profile", {
+						resume: it.resume
+					}) %>
+					
+					<!-- INTEREST -->
+					<%~ include("interest", {
+						resume: it.resume
+					}) %>
 				</div>
 
 				<div class="right">
@@ -106,11 +111,6 @@
 					
 					<!-- SKILLS -->
 					<%~ include("skills", {
-						resume: it.resume
-					}) %>
-					
-					<!-- INTEREST -->
-					<%~ include("interest", {
 						resume: it.resume
 					}) %>
 				</div>
