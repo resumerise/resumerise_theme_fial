@@ -233,9 +233,6 @@ section {
     font-size: var(--small-font-size);
     width: fit-content;
     border-radius: 0.3em;
-    color: white;
-    background-color: var(--first-color-lighter-dark);
-    padding: .5em;
     margin-bottom: .5rem;
 }
 
@@ -666,6 +663,7 @@ label {
 
     /* cover */
     @page: first {
+
         @top-right {
             content: none;
         }
@@ -702,7 +700,7 @@ label {
     .cover-page .main-skills .list__label {
         font-size: var(--big-font-size);
         text-align: center;
-        font-weight: var(--font-600);
+        font-weight: 600;
     }
 
     .cover-page .main-skills li {
@@ -778,7 +776,7 @@ label {
         -webkit-print-color-adjust: exact;
         color: black !important;
     }
-    
+
     .cover-page__contact * {
         display: flex;
         flex-direction: row;
@@ -834,4 +832,23 @@ label {
     /* .right {
         order: -1;
     } */
+}
+
+/* ======================================== INTERACTIVE ======================================== */
+.INTERACTIVE .nav-add {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.INTERACTIVE .profiles article {
+    padding: 2em 0;
+}
+
+.INTERACTIVE .profiles .article-container {
+    display: flex;
+    flex-direction: column;
+}
+
+html:not(.INTERACTIVE) .profiles article .profile-item {
+    display: inline-block;
 }
