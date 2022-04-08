@@ -1,6 +1,6 @@
 <section class="publications" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></h3>
+		<header><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
 	<% } %>
 
 	<% it.resume?.publications.forEach(function(publication) { %>
@@ -10,7 +10,7 @@
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
                 value: publication.publisher,
                 showLabel: false,
-                classes: 'wrapper__title'}) %>
+                classes: 'article__title'}) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
                 value: publication.releaseDate,

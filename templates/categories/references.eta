@@ -1,6 +1,6 @@
 <section class="references" id="references">
 	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></h3>
+		<header><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
 	<% } %>
 
 	<% it.resume?.references.forEach(function(reference) { %>
@@ -10,7 +10,7 @@
 				label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 				value: reference.name,
 				showLabel: false,
-				classes: 'wrapper__title'}) %>
+				classes: 'article__title'}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 				value: reference.reference,

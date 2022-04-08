@@ -1,6 +1,6 @@
 <section class="certificates" id="certifications">
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h3>
+		<header><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></header>
 	<% } %>
 	
 	<% it.resume?.certifications.forEach(function(certificate) { %>
@@ -9,7 +9,7 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
 				value: certificate.issuer,
-				classes: 'wrapper__title',
+				classes: 'article__title',
 				showLabel: false}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 

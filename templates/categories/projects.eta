@@ -10,7 +10,7 @@
 				label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 				value: project.title,
 				showLabel: false,
-				classes: 'wrapper__title'}) %>
+				classes: 'article__title'}) %>
 			<div class="article__date">
 				<%~ include('date-range', {
 					startDate: project.startDate,

@@ -5,7 +5,7 @@
         }) %>
         
         <h1><%= it.resume.basics.name %></h1>
-        <h3><%= it.resume.basics.label %></h3>
+        <h3><%= it.resume.basics.label %></header>
         <p class="summary"><%= it.resume.basics.summary %></p>
     </div>
 

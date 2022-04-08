@@ -136,7 +136,7 @@ section {
     padding: 3rem 0;
 }
 
-.section__title {
+header {
     display: inline-block;
     font-size: var(--h2-font-size);
     color: var(--white-color);
@@ -149,7 +149,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.wrapper__title {
+.article__title {
     font-weight: var(--font-semi-bold);
     font-size: var(--h3-font-size);
     color: black;
@@ -815,7 +815,7 @@ label {
         color: red;
     }
 
-    .section__title {
+    header {
         display: inline-block;
         -webkit-print-color-adjust: exact;
         font-size: var(--h2-font-size);

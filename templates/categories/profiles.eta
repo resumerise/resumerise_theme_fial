@@ -1,6 +1,6 @@
 <section class="profiles" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <h3 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></h3>
+        <h3 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
     <% } %>
 
     <div class="article-container">

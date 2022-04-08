@@ -1,6 +1,6 @@
  <section class="education" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></h3>
+		<header><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
 	<% } %>
 
 	<% if(it.resume?.education) { %>
@@ -11,7 +11,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 						value: education.institution,
-						classes: 'wrapper__title',
+						classes: 'article__title',
 						showLabel: false,
 					}) %>
 

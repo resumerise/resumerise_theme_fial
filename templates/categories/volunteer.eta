@@ -1,6 +1,6 @@
 <section class="volunteer" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></h3>
+		<header><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
 
 	<% it.resume?.volunteer.forEach(function(volunteer) { %>
@@ -9,7 +9,7 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
 				value: volunteer.organization,
-				classes: 'wrapper__title',
+				classes: 'article__title',
 				showLabel: false}) %>
 				
 			<div class="article__date">
