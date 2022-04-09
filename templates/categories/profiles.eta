@@ -1,9 +1,9 @@
 <section class="profiles" id="profiles">
     <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <h3 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
+        <header class="section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
     <% } %>
 
-    <div class="article-container">
+    <div class="article-container profiles__container grid">
         <% it.resume.basics.profiles?.forEach(function(profile){ %>
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.profile, showDelete: true, id: profile.id}) %>

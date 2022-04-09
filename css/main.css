@@ -259,7 +259,7 @@ header {
     margin-bottom: 1rem;
 }
 
-:is(.skills, .interests, .languages, .profiles, .certifications) .article-container {
+:is(.skills, .interests, .languages, .certifications) .article-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 1.5rem;
 }
@@ -357,10 +357,18 @@ label {
 }
 
 /* ======================================== ICONS ======================================== */
+.profiles__container {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 2rem 0;
+    justify-items: center;
+    align-items: center;
+}
+
 .icon {
     font-style: normal;
     margin-right: 0;
-    color: var(--icon-color);
+    color: hsl(23, 100%, 87%);
+    font-size: var(--h2-font-size);
 }
 
 .icon.twitter:before {
@@ -526,7 +534,7 @@ label {
         user-select: none;
     }
 
-    :is(.skills, .interests, .languages, .profiles) .article-container {
+    :is(.skills, .interests, .languages) .article-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -575,6 +583,7 @@ label {
             content: element(availableFromRunning);
         }
     }
+
 
     /* table of contents */
     @page table-of-contents {
@@ -699,6 +708,7 @@ label {
 
     .cover-page .main-skills .list__label {
         font-size: var(--big-font-size);
+        color: var(--title-color);
         text-align: center;
         font-weight: 600;
     }
@@ -717,6 +727,7 @@ label {
         align-items: center;
         justify-content: center;
         align-content: center;
+        margin-top: -10rem;
         gap: 2cm;
     }
 
@@ -726,14 +737,19 @@ label {
     }
 
     .cover-page h1 {
-        font-size: var(--bigger-font-size);
+        font-size: var(--big-font-size);
         font-family: var(--body-font);
         line-height: 1;
+        margin-bottom: .25rem;
     }
 
     .cover-page h3 {
         margin: -.75rem 0 .5rem;
         font-weight: var(--font-500);
+    }
+
+    .cover-page p {
+        font-size: var(--normal-font-size);
     }
 
     :is(h1,
@@ -760,10 +776,12 @@ label {
         margin-top: 6rem;
     }
 
-    .cover-page__header .picture img {
-        width: 10cm;
-        height: auto;
-        border-radius: 50%;
+    .home__img {
+        border-radius: .25rem;
+        -webkit-border-radius: .25rem;
+        -moz-border-radius: .25rem;
+        -ms-border-radius: .25rem;
+        -o-border-radius: .25rem;
     }
 
     .cover-page__contact {
@@ -782,6 +800,7 @@ label {
         flex-direction: row;
         align-items: center;
         gap: .3rem;
+        color: var(--title-color) !important;
     }
 
     .cover-page__social {
