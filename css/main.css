@@ -621,20 +621,18 @@ label {
         text-decoration: none;
     }
 
+    .toc-element-level-1 a {
+        font-weight: 600;
+    }
+
     .toc-element-level-1 {
         font-size: 0.5cm;
     }
 
     .toc-element-level-2 {
         font-size: 0.4cm;
-        -webkit-print-color-adjust: exact;
-        background-color: green;
         font-weight: 400;
-    }
-
-    .toc-element-level-1 a {
-        -webkit-print-color-adjust: exact;
-        background-color: red;
+        margin-bottom: .25rem;
     }
 
     .toc-element-level-1 a, .toc-element-level-2 a {
@@ -653,9 +651,9 @@ label {
     }
 
     #list-toc-generated .toc-element-level-1 {
-        border-bottom: 0.0625rem solid black;
+        border-bottom: .0625rem solid black;
         margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: .75rem;
         padding-bottom: 0.5rem;
         font-weight: bold;
     }
@@ -697,6 +695,18 @@ label {
         @bottom-left {
             content: none;
         }
+    }
+
+    section {
+        padding-top: 1.25rem;
+    }
+
+    .article-container {
+        gap: 0;
+    }
+
+    .skills .article-container {
+        gap: 1.5rem;
     }
 
     .cover-page .main-skills {

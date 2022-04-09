@@ -13,7 +13,7 @@
     <div>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h1 class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+            <header class="section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
         <% } %>
         
         <div class="home__container grid">
