@@ -352,14 +352,10 @@ header {
     text-align: center;
 }
 
-label {
-    display: none;
-}
-
 /* ======================================== ICONS ======================================== */
 .profiles__container {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    /* gap: 2rem 0; */
     justify-items: center;
     align-items: center;
 }
@@ -777,8 +773,7 @@ label {
         .article__list,
         .article__url,
         .article__mail,
-        .article__phone,
-        .cover-page__social .icon) .cover-page {
+        .article__phone) .cover-page {
         -webkit-print-color-adjust: exact;
         color: black !important;
     }
@@ -829,7 +824,8 @@ label {
     }
 
     .cover-page__social .icon {
-        font-size: 16pt;
+        -webkit-print-color-adjust: exact;
+        color: var(--first-color-alt) !important;
     }
 
     .cover-page__header .summary {
