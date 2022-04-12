@@ -32,6 +32,7 @@
 
     <% if (it.resume.skills?.length) { %>
         <div class="article__list main-skills">
+            
             <label class="list__label">
                 <%= it.resume.settings?.labels?.mainSkills %>
             </label>
