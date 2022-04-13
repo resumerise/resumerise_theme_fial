@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 		<title><%= it.resume.basics?.name ? it.resume.basics.name : ''%></title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		
 		<% if (it.type === 'PRINT') { %>
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -32,7 +33,7 @@
 
 				<!-- margin boxes (START) -->
 				<p class="footer-print">
-					<a href="#toc-start"><%= it.resume.settings.labels?.toc %></a>
+					<a href="#toc-start"><i class="fa-solid fa-bars-staggered"></i> <%= it.resume.settings.labels?.toc %></a>
 				</p>
 				<p class="user-compact-print">
 					<%= it.resume.basics.label %>
@@ -52,9 +53,9 @@
 			}) %>
 
 			<div class="main__wrapper">
+				<div class="counter-reset"></div>
 				<div class="left">
 					<!-- AWARDS -->
-					<div class="counter-reset"></div>
 					<%~ include("awards", {
 						resume: it.resume
 					}) %>

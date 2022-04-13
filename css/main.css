@@ -543,6 +543,10 @@ header {
         position: running(footerRunning);
     }
 
+    .footer-print a {
+        color: black;
+    }
+
     .user-compact-print {
         position: running(userCompactRunning);
     }
