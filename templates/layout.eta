@@ -53,8 +53,8 @@
 			}) %>
 
 			<div class="main__wrapper">
-				<div class="counter-reset"></div>
 				<div class="left">
+				<div class="counter-reset"></div>
 					<!-- AWARDS -->
 					<%~ include("awards", {
 						resume: it.resume
