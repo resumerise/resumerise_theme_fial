@@ -13,6 +13,7 @@
     --container-color-alt: hsl(60, 3%, 94%);
     --body-color: hsl(60, 0%, 99%);
     --white-color: white;
+    --icon-color:  hsl(23, 98%, 68%);
 
     /*  First color lighter dark */
     --first-color-lighter-dark: hsl(23, 8%, 15%);
@@ -363,44 +364,12 @@ header {
 .icon {
     font-style: normal;
     margin-right: 0;
-    color: hsl(23, 100%, 87%);
-    font-size: var(--h2-font-size);
+    color: var(--icon-color) !important;
 }
 
-.icon.twitter:before {
-    content: "\f099";
-}
-
-.icon.github:before {
-    content: "\f09b";
-}
-
-.icon.facebook:before {
-    content: "\f39e";
-}
-
-.icon.instagram:before {
-    content: "\f16d";
-}
-
-.icon.xing:before {
-    content: "\f168";
-}
-
-.icon.behance:before {
-    content: "\f39e";
-}
-
-.icon.dribbble:before {
-    content: "\f17d";
-}
-
-.icon.medium:before {
-    content: "\f23a";
-}
-
-.icon.linkedin:before {
-    content: "\f08c";
+.profiles .icon {
+    font-size: 1.5em;
+    color: var(--first-color-lighter);
 }
 
 /* SCROLLBAR */
@@ -900,3 +869,49 @@ header {
 html:not(.INTERACTIVE) .profiles article .profile-item {
     display: inline-block;
 }
+
+
+
+/* ======================================== ICONS ======================================== */
+.icon {
+font-style: normal;
+margin-right: 0;
+color: var(--icon-color);
+}
+
+.icon.twitter:before {
+content: "\f099";
+}
+
+.icon.github:before {
+content: "\f09b";
+}
+
+.icon.facebook:before {
+content: "\f39e";
+}
+
+.icon.instagram:before {
+content: "\f16d";
+}
+
+.icon.xing:before {
+content: "\f168";
+}
+
+.icon.behance:before {
+content: "\f39e";
+}
+
+.icon.dribbble:before {
+content: "\f17d";
+}
+
+.icon.medium:before {
+content: "\f23a";
+}
+
+.icon.linkedin:before {
+content: "\f08c";
+}
+  
